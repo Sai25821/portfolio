@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Kalyan Bade | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+--bg:#0d1117;--surface:#161b22;--border:#30363d;
+--text:#e6edf3;--text-muted:#8b949e;--accent:#58a6ff;
+--tag-bg:rgba(88,166,255,0.1);--tag-color:#58a6ff;--tag-border:rgba(88,166,255,0.3);
+}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+a{color:var(--accent);text-decoration:none;}
+nav{position:fixed;top:0;width:100%;background:rgba(13,17,23,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:16px 40px;display:flex;justify-content:space-between;align-items:center;z-index:100;}
+.logo{font-weight:700;font-size:1.2rem;color:var(--accent);}
+nav ul{list-style:none;display:flex;gap:24px;}
+nav ul a{color:var(--text-muted);font-size:0.9rem;transition:color 0.2s;}
+nav ul a:hover{color:var(--accent);}
+.hero{padding:120px 40px 80px;max-width:900px;margin:0 auto;}
+.badge{display:inline-block;border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:0.82rem;color:var(--text-muted);margin-bottom:20px;}
+.hero h1{font-size:3rem;font-weight:700;margin-bottom:10px;}
+.hero h1 span{color:var(--accent);}
+.subtitle{font-size:1.1rem;color:var(--accent);margin-bottom:20px;font-weight:500;}
+.hero p{color:var(--text-muted);max-width:720px;margin-bottom:30px;font-size:0.97rem;}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;}
+.skill-tag{background:var(--tag-bg);color:var(--tag-color);border:1px solid var(--tag-border);padding:5px 14px;border-radius:20px;font-size:0.82rem;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{background:var(--accent);color:#0d1117;padding:12px 24px;border-radius:8px;font-weight:600;transition:opacity 0.2s;}
+.btn-primary:hover{opacity:0.85;}
+.btn-secondary{border:1px solid var(--border);color:var(--text);padding:12px 24px;border-radius:8px;transition:border-color 0.2s;}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent);}
+section{max-width:900px;margin:0 auto;padding:60px 40px;}
+section h2{font-size:1.6rem;margin-bottom:8px;}
+.section-line{width:50px;height:3px;background:var(--accent);margin-bottom:40px;border-radius:2px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:20px;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;transition:border-color 0.2s;}
+.card:hover{border-color:var(--accent);}
+.card h3{margin-bottom:10px;font-size:1rem;}
+.card h3 a{color:var(--text);}
+.card h3 a:hover{color:var(--accent);}
+.card p{color:var(--text-muted);font-size:0.88rem;margin-bottom:16px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.tags span{background:var(--tag-bg);color:var(--tag-color);border:1px solid var(--tag-border);padding:3px 10px;border-radius:12px;font-size:0.78rem;}
+.gh-link{display:inline-block;margin-top:12px;font-size:0.85rem;color:var(--accent);}
+.exp-list,.edu-list,.cert-grid{display:grid;gap:20px;}
+.cert-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));}
+.exp-card,.cert-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;}
+.exp-card h3{font-size:1rem;margin-bottom:4px;}
+.exp-card h3 span{color:var(--accent);}
+.exp-meta{color:var(--text-muted);font-size:0.82rem;margin-bottom:14px;}
+.exp-card>p{color:var(--text-muted);font-size:0.88rem;margin-bottom:12px;}
+.exp-card ul{padding-left:0;list-style:none;}
+.exp-card li{color:var(--text-muted);font-size:0.87rem;padding:5px 0;border-bottom:1px solid var(--border);}
+.exp-card li:last-child{border-bottom:none;}
+.exp-card li::before{content:'• ';color:var(--accent);}
+.edu-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:20px;align-items:flex-start;}
+.edu-icon{font-size:2rem;}
+.edu-body h3{font-size:1rem;margin-bottom:4px;}
+<nav>
+  <div class="logo">SKB</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero" id="about">
+  <div class="badge">Open to Entry Roles &mdash; Data Analytics &bull; Internships &bull; Graduate Programmes &bull; IT Roles in Ireland</div>
+  <h1>Hi, I'm <span>Sai Kalyan Bade</span></h1>
+  <div class="subtitle">MSc Data Analytics Graduate &bull; NLP &amp; Machine Learning Specialist</div>
+  <p>Data Analytics professional with hands-on expertise in machine learning, NLP, and business intelligence. Skilled in building end-to-end data pipelines, developing predictive models, and translating complex datasets into actionable insights. Proficient across the full analytics stack &mdash; from SQL and Python to Power BI, TensorFlow, and transformer-based deep learning.</p>
+  <div class="skills">
+    <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Machine Learning</span><span class="skill-tag">NLP</span><span class="skill-tag">Tableau</span><span class="skill-tag">Power BI</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">PyTorch</span>
+  </div>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-primary">Contact Me</a>
+    <a href="https://github.com/Sai25821" class="btn-secondary" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/sai-kalyan-bade-aab15920a/" class="btn-secondary" target="_blank">LinkedIn</a>
+  </div>
+</div>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="section-line"></div>
+  <div class="cards">
+    <div class="card">
+      <h3><a href="https://github.com/Sai25821/LLM-Based-Fake-Review-Detection-Classification-MSc-Thesis" target="_blank">LLM-Based Fake Review Detection &amp; Classification (MSc Thesis)</a></h3>
+      <p>Built transformer-based models (DeBERTa, XLNet, BERT) for detecting AI-generated fake reviews, achieving <strong>89.2% accuracy</strong>. Used Hugging Face, TensorFlow, PyTorch. Fine-tuned on YELP and Amazon datasets, processing over 50,000 labelled samples. Implemented advanced preprocessing pipelines with tokenisation, augmentation, and cross-validation.</p>
+      <div class="tags"><span>NLP</span><span>Transformers</span><span>Python</span><span>PyTorch</span></div>
+      <a class="gh-link" href="https://github.com/Sai25821/LLM-Based-Fake-Review-Detection-Classification-MSc-Thesis" target="_blank">View on GitHub &rarr;</a>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Sai25821/Tackling-Declining-Customer-Footfall-and-Order-Volume-in-a-Restaurant-Chain-" target="_blank">Tackling Declining Customer Footfall &amp; Order Volume in a Restaurant Chain</a></h3>
+      <p>Developed a comprehensive Business Intelligence solution for a multi-location restaurant chain using Salesforce CRM, Power BI, and SQL. Identified 34% of customers at high churn risk using predictive analytics. Built normalised SQL database architecture processing 10,000+ records and created real-time Power BI dashboards.</p>
+      <div class="tags"><span>Power BI</span><span>Salesforce CRM</span><span>SQL</span><span>Predictive Analytics</span><span>ETL</span></div>
+      <a class="gh-link" href="https://github.com/Sai25821/Tackling-Declining-Customer-Footfall-and-Order-Volume-in-a-Restaurant-Chain-" target="_blank">View on GitHub &rarr;</a>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Sai25821/Stock-Price-Prediction-ML" target="_blank">Stock Price Prediction ML</a></h3>
+      <p>Engineered a deep learning system for financial market forecasting using DeBERTa, XLNet, and Attention-GRU architectures. Applied comprehensive feature engineering on historical OHLCV stock data. Evaluated models using MSE, RMSE, MAE, and R&sup2; with visualisation tools.</p>
+      <div class="tags"><span>Deep Learning</span><span>Python</span><span>TensorFlow</span><span>GRU</span><span>Finance</span></div>
+      <a class="gh-link" href="https://github.com/Sai25821/Stock-Price-Prediction-ML" target="_blank">View on GitHub &rarr;</a>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Sai25821/job-scraper-automation" target="_blank">Job Scraper Automation</a></h3>
+      <p>Automated job scraper for Indeed that runs daily via GitHub Actions and updates Google Sheets with new Data Analyst &amp; ML Engineer roles in Dublin, Ireland.</p>
+      <div class="tags"><span>Python</span><span>GitHub Actions</span><span>Automation</span><span>Google Sheets</span></div>
+      <a class="gh-link" href="https://github.com/Sai25821/job-scraper-automation" target="_blank">View on GitHub &rarr;</a>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/Sai25821/india-internship-scraper" target="_blank">India Internship Scraper</a></h3>
+      <p>Automated scraper for Indian internships from Internshala, LinkedIn India, and Indeed India. Runs daily via GitHub Actions, updates Google Sheets with Data Analytics, ML, and AI listings.</p>
+      <div class="tags"><span>Python</span><span>Web Scraping</span><span>Automation</span></div>
+      <a class="gh-link" href="https://github.com/Sai25821/india-internship-scraper" target="_blank">View on GitHub &rarr;</a>
+    </div>
+    <div class="card">
+      <h3>User Behavior Analytics (Effling EdTech)</h3>
+      <p>Analysed engagement patterns for an educational mobile app (1,000+ downloads). Built predictive churn models using Logistic Regression &amp; Random Forest achieving <strong>84.3% accuracy</strong>. Designed Tableau dashboards tracking 20+ daily metrics.</p>
+      <div class="tags"><span>Python</span><span>Tableau</span><span>A/B Testing</span><span>ML</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="section-line"></div>
+  <div class="exp-list">
+    <div class="exp-card">
+      <h3>Customer Advisor &mdash; <span>B&amp;Q</span></h3>
+      <p class="exp-meta">Mar 2025 &ndash; Present &bull; Dublin, Ireland &bull; Part-time</p>
+      <p>Provided data-driven customer service in one of Dublin's largest retail environments, applying analytical thinking to improve customer satisfaction and resolve complex queries efficiently.</p>
+      <ul>
+        <li>Delivered high-quality in-person customer support across product, delivery, and returns enquiries, consistently achieving positive feedback.</li>
+        <li>Managed point-of-sale systems and handled cash/card transactions with accuracy during high-footfall periods.</li>
+        <li>Analysed recurring customer complaints and feedback patterns to identify process improvement opportunities, presenting findings to store supervisors.</li>
+        <li>Applied data analytics background to monitor product availability trends and flag stock discrepancies proactively.</li>
+        <li>Collaborated with cross-functional teams to ensure seamless customer journeys across departments.</li>
+      </ul>
+      <div class="tags" style="margin-top:14px"><span>Customer Service</span><span>POS Systems</span><span>Team Collaboration</span><span>Data-driven Insights</span></div>
+    </div>
+    <div class="exp-card">
+      <h3>Data Analytics Intern &mdash; <span>Effling Edtech Pvt. Ltd.</span></h3>
+      <p class="exp-meta">Jul 2024 &ndash; Dec 2024 &bull; Remote (India)</p>
+      <p>Contributed to data-driven product development at an early-stage EdTech startup, applying machine learning, statistical analysis, and business intelligence techniques to improve user retention and app performance across a growing platform.</p>
+      <ul>
+        <li>Analysed user engagement patterns and behavioural data for an educational mobile app with 1,000+ downloads, identifying key drop-off points and retention opportunities that informed product decisions.</li>
+        <li>Designed and executed end-to-end A/B testing frameworks across 5 key product features, applying chi-square tests, t-tests, and ANOVA to validate hypotheses and deliver statistically significant insights to the product team.</li>
+        <li>Built and evaluated predictive churn models using Logistic Regression and Random Forest algorithms, achieving 84.3% accuracy and enabling the team to proactively target at-risk users with personalised re-engagement strategies.</li>
+        <li>Developed interactive Tableau dashboards tracking 20+ daily active user metrics, enabling stakeholders to monitor real-time performance and make data-driven product improvements with greater speed and confidence.</li>
+        <li>Built Python and SQL automation pipelines that reduced manual reporting time by over 60%, streamlining data extraction, transformation, and loading (ETL) processes across multiple data sources to improve team efficiency.</li>
+      </ul>
+      <div class="tags" style="margin-top:14px"><span>Python</span><span>SQL</span><span>Tableau</span><span>A/B Testing</span><span>Machine Learning</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="section-line"></div>
+  <div class="edu-list">
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <h3>MSc Data Analytics</h3>
+        <div class="school">National College of Ireland, Dublin</div>
+        <div class="dates">Jan 2025 &ndash; Jan 2026</div>
+        <div class="edu-grade">First Class Honours &bull; GPA: 74.7%</div>
+        <p>Specialised in machine learning, NLP, data analytics, and BI. Thesis on LLM-based fake review detection achieving 89.2% accuracy.</p>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <h3>Bachelor of Computer Applications</h3>
+        <div class="school">Nizam College, Hyderabad</div>
+        <div class="dates">Sep 2021 &ndash; Jun 2024</div>
+        <div class="edu-grade">Grade: 92%</div>
+        <p>Computer and Information Sciences. Developed skills in Data Analysis, Financial Analysis, and programming fundamentals.</p>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <h3>MPC, Computer Science</h3>
+        <div class="school">Siva Sivani Institute of Management</div>
+        <div class="dates">Jun 2019 &ndash; Jun 2021</div>
+        <div class="edu-grade">Grade: 89.4%</div>
+        <p>Maths, Physics &amp; Computer Science. Activities: Ethical Hacking and Bug Hunting certificate courses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="section-line"></div>
+  <div class="cert-grid">
+    <div class="cert-card"><h4>Tata Data Visualisation</h4><p>Empowering Business with Effective Insights &mdash; Forage (2025)</p></div>
+    <div class="cert-card"><h4>Data Analytics Job Simulation</h4><p>Deloitte &mdash; Forage (Sep 2025)</p></div>
+    <div class="cert-card"><h4>Data Analytics Essentials</h4><p>Cisco Networking Academy (Apr 2024)</p></div>
+    <div class="cert-card"><h4>Data Analytics &amp; Visualisation</h4><p>Accenture North America &mdash; Forage (Jun 2024)</p></div>
+    <div class="cert-card"><h4>Quantium Data Analytics</h4><p>Job Simulation &mdash; Forage (Feb 2025)</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="section-line"></div>
+  <p style="color:var(--text-muted);margin-bottom:24px">Open to Data Analytics, IT Support, or hybrid roles in Dublin. Feel free to reach out!</p>
+  <div class="contact-grid">
+    <a href="mailto:saikalyanbade4@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> saikalyanbade4@gmail.com</a>
+    <a href="tel:+353899642636" class="contact-btn"><i class="fas fa-phone"></i> +353 89 964 2636</a>
+    <a href="https://github.com/Sai25821" class="contact-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/sai-kalyan-bade-aab15920a/" class="contact-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  Built by Sai Kalyan Bade &bull; Dublin, Ireland &bull; 2026
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
+.edu-body .school{color:var(--accent);font-size:0.88rem;}
+.edu-body .dates{color:var(--text-muted);font-size:0.82rem;margin-bottom:8px;}
+.edu-grade{display:inline-block;background:var(--tag-bg);color:var(--tag-color);border:1px solid var(--tag-border);padding:3px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;margin-bottom:8px;}
+.edu-body p{color:var(--text-muted);font-size:0.85rem;}
+.cert-card h4{font-size:0.95rem;margin-bottom:6px;}
+.cert-card p{color:var(--text-muted);font-size:0.83rem;}
+.contact-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.contact-btn{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 20px;color:var(--text);font-size:0.92rem;transition:all 0.2s;}
+.contact-btn:hover{border-color:var(--accent);color:var(--accent);}
+.contact-btn i{color:var(--accent);}
+footer{text-align:center;padding:30px;color:var(--text-muted);font-size:0.85rem;border-top:1px solid var(--border);}
+@media(max-width:768px){.hero h1{font-size:2.2rem;}nav{padding:14px 20px;}nav ul{gap:14px;}.hero{padding:80px 20px 60px;}section{padding:40px 20px;}.edu-card{flex-direction:column;}.cards{grid-template-columns:1fr;}.cert-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
